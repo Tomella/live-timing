@@ -19,3 +19,6 @@ Everything builds into the liveTiming directory. It builds to have a small foot 
 easily be overlayed with other applications with little likelyhood of name clashes with:
 * The HTML at the base
 * All other content under the directories.
+
+Just copy the liveTiming directory to where ever you want and then go http://my.host.com/liveTiming and it should work.
+It uses CDN for AngularJS and the rest is tiny
