@@ -1,0 +1,41 @@
+.red {
+  background-color: red;
+}
+
+.ontrack {
+  background-color: lightgreen;
+}
+
+.inpit {
+  background-color: #ff8080;
+}
+
+.fastest .lap-time {
+  font-weight: bold;
+}
+
+td {
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.odd {
+  background-color: #e0e0e0;
+}
+
+.fastest {
+  background-color: lightyellow;
+}
+
+.odd.fastest {
+  background-color: #F0F0D7;
+}
+
+th {
+  background-color: #e0e0e0;
+}
+
+table.center {
+  margin-left: auto;
+  margin-right: auto;
+}

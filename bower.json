@@ -1,0 +1,27 @@
+{
+  "name": "live-timing",
+  "version": "0.0.1",
+  "description": "Live timing",
+  "keywords": [
+    "live",
+    "timing",
+    "motogp",
+    "data"
+  ],
+  "directory": "liveTiming/bower_components",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "license": "LICENCE",
+  "dependencies": {
+    "angular": "~1.4.12",
+    "x2js": "x2js#^1.2.0"
+  },
+  "resolutions": {
+    "angular": "~1.4.12"
+  }
+}

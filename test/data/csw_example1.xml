@@ -1,0 +1,540 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<csw:GetRecordByIdResponse xmlns:csw="http://www.opengis.net/cat/csw/2.0.2">
+  <gmd:MD_Metadata xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:srv="http://www.isotc211.org/2005/srv" xmlns:gmx="http://www.isotc211.org/2005/gmx" xmlns:gts="http://www.isotc211.org/2005/gts" xmlns:gsr="http://www.isotc211.org/2005/gsr" xmlns:gmi="http://www.isotc211.org/2005/gmi" xmlns:gml="http://www.opengis.net/gml" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <gmd:fileIdentifier>
+      <gco:CharacterString>00e86b75-5920-4b3b-b273-a047da02ea65</gco:CharacterString>
+    </gmd:fileIdentifier>
+    <gmd:language>
+      <gmd:LanguageCode codeList="http://www.loc.gov/standards/iso639-2/" codeListValue="eng" />
+    </gmd:language>
+    <gmd:characterSet>
+      <gmd:MD_CharacterSetCode codeListValue="utf8" codeList="http://www.isotc211.org/namespace/resources/codeList.xml#MD_CharacterSetCode" />
+    </gmd:characterSet>
+    <gmd:hierarchyLevel>
+      <gmd:MD_ScopeCode codeList="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/Codelist/ML_gmxCodelists.xml#MD_ScopeCode" codeListValue="service" />
+    </gmd:hierarchyLevel>
+    <gmd:hierarchyLevelName>
+      <gco:CharacterString>service</gco:CharacterString>
+    </gmd:hierarchyLevelName>
+    <gmd:contact>
+      <gmd:CI_ResponsibleParty>
+        <gmd:organisationName>
+          <gco:CharacterString>Commonwealth of Australia (Geoscience Australia)</gco:CharacterString>
+        </gmd:organisationName>
+        <gmd:contactInfo>
+          <gmd:CI_Contact>
+            <gmd:phone>
+              <gmd:CI_Telephone>
+                <gmd:voice>
+                  <gco:CharacterString>02 6249 9966</gco:CharacterString>
+                </gmd:voice>
+              </gmd:CI_Telephone>
+            </gmd:phone>
+            <gmd:address>
+              <gmd:CI_Address>
+                <gmd:deliveryPoint>
+                  <gco:CharacterString>Cnr Jerrabomberra Ave and Hindmarsh Dr</gco:CharacterString>
+                </gmd:deliveryPoint>
+                <gmd:deliveryPoint>
+                  <gco:CharacterString>GPO Box 378</gco:CharacterString>
+                </gmd:deliveryPoint>
+                <gmd:city>
+                  <gco:CharacterString>Canberra</gco:CharacterString>
+                </gmd:city>
+                <gmd:administrativeArea>
+                  <gco:CharacterString>ACT</gco:CharacterString>
+                </gmd:administrativeArea>
+                <gmd:postalCode>
+                  <gco:CharacterString>2601</gco:CharacterString>
+                </gmd:postalCode>
+                <gmd:country>
+                  <gco:CharacterString>Australia</gco:CharacterString>
+                </gmd:country>
+                <gmd:electronicMailAddress>
+                  <gco:CharacterString>clientservices@ga.gov.au</gco:CharacterString>
+                </gmd:electronicMailAddress>
+              </gmd:CI_Address>
+            </gmd:address>
+          </gmd:CI_Contact>
+        </gmd:contactInfo>
+        <gmd:role>
+          <gmd:CI_RoleCode codeList="codeListLocation#CI_RoleCode" codeListValue="pointOfContact">pointOfContact</gmd:CI_RoleCode>
+        </gmd:role>
+      </gmd:CI_ResponsibleParty>
+    </gmd:contact>
+    <gmd:dateStamp>
+      <gco:DateTime>2013-02-08T00:00:00</gco:DateTime>
+    </gmd:dateStamp>
+    <gmd:metadataStandardName>
+      <gco:CharacterString>ANZLIC Metadata Profile: An Australian/New Zealand Profile of AS/NZS ISO 19115:2005, Geographic information - Metadata</gco:CharacterString>
+    </gmd:metadataStandardName>
+    <gmd:metadataStandardVersion>
+      <gco:CharacterString>1.1</gco:CharacterString>
+    </gmd:metadataStandardVersion>
+    <gmd:identificationInfo>
+      <srv:SV_ServiceIdentification>
+        <gmd:citation>
+          <gmd:CI_Citation>
+            <gmd:title>
+              <gco:CharacterString>dem_s_1s</gco:CharacterString>
+            </gmd:title>
+            <gmd:date>
+              <gmd:CI_Date>
+                <gmd:date>
+                  <gco:DateTime>2000-01-01T00:00:00</gco:DateTime>
+                </gmd:date>
+                <gmd:dateType>
+                  <gmd:CI_DateTypeCode codeList="codeListLocation#CI_DateTypeCode" codeListValue="publication">publication</gmd:CI_DateTypeCode>
+                </gmd:dateType>
+              </gmd:CI_Date>
+            </gmd:date>
+            <gmd:identifier>
+              <gmd:RS_Identifier>
+                <gmd:code>
+                  <gco:CharacterString>83317</gco:CharacterString>
+                </gmd:code>
+              </gmd:RS_Identifier>
+            </gmd:identifier>
+            <gmd:identifier>
+              <gmd:RS_Identifier>
+                <gmd:code>
+                  <gco:CharacterString>Product</gco:CharacterString>
+                </gmd:code>
+              </gmd:RS_Identifier>
+            </gmd:identifier>
+          </gmd:CI_Citation>
+        </gmd:citation>
+        <gmd:abstract>
+          <gco:CharacterString>The 1 second Shuttle Radar Topographic Mission (SRTM) derived smoothed Digital Elevation Model (DEM-S) Version 1.0 is a 1 arc second (~30m) gridded smoothed version of the DEM (ANZCW0703013355). The DEM-S represents ground surface topography, excluding vegetation features, and has been smoothed to reduce noise and improve the representation of surface shape. The dataset was derived from the 1 second Digital Elevation Model Version 1.0 (DSM; ANZCW0703013336) by an adaptive smoothing process that applies more smoothing in flatter areas than hilly areas, and more smoothing in noisier areas than in less noisy areas. This DEM-S supports calculation of local terrain shape attributes such as slope, aspect and curvatures that could not be reliably derived from the unsmoothed DEM because of noise. A full description of the methods is in progress (Gallant et al., in prep).</gco:CharacterString>
+        </gmd:abstract>
+        <gmd:pointOfContact>
+          <gmd:CI_ResponsibleParty>
+            <gmd:organisationName>
+              <gco:CharacterString>Commonwealth of Australia (Geoscience Australia)</gco:CharacterString>
+            </gmd:organisationName>
+            <gmd:role>
+              <gmd:CI_RoleCode codeList="codeListLocation#CI_RoleCode" codeListValue="owner">owner</gmd:CI_RoleCode>
+            </gmd:role>
+          </gmd:CI_ResponsibleParty>
+        </gmd:pointOfContact>
+        <gmd:pointOfContact>
+          <gmd:CI_ResponsibleParty>
+            <gmd:organisationName>
+              <gco:CharacterString>Commonwealth of Australia (Geoscience Australia)</gco:CharacterString>
+            </gmd:organisationName>
+            <gmd:positionName>
+              <gco:CharacterString>Manager Client Services</gco:CharacterString>
+            </gmd:positionName>
+            <gmd:contactInfo>
+              <gmd:CI_Contact>
+                <gmd:phone>
+                  <gmd:CI_Telephone>
+                    <gmd:voice>
+                      <gco:CharacterString>02 6249 9966</gco:CharacterString>
+                    </gmd:voice>
+                  </gmd:CI_Telephone>
+                </gmd:phone>
+                <gmd:address>
+                  <gmd:CI_Address>
+                    <gmd:deliveryPoint>
+                      <gco:CharacterString>Cnr Jerrabomberra Ave and Hindmarsh Dr GPO Box 378</gco:CharacterString>
+                    </gmd:deliveryPoint>
+                    <gmd:city>
+                      <gco:CharacterString>Canberra</gco:CharacterString>
+                    </gmd:city>
+                    <gmd:administrativeArea>
+                      <gco:CharacterString>ACT</gco:CharacterString>
+                    </gmd:administrativeArea>
+                    <gmd:postalCode>
+                      <gco:CharacterString>2601</gco:CharacterString>
+                    </gmd:postalCode>
+                    <gmd:country>
+                      <gco:CharacterString>Australia</gco:CharacterString>
+                    </gmd:country>
+                    <gmd:electronicMailAddress>
+                      <gco:CharacterString>clientservices@ga.gov.au</gco:CharacterString>
+                    </gmd:electronicMailAddress>
+                  </gmd:CI_Address>
+                </gmd:address>
+              </gmd:CI_Contact>
+            </gmd:contactInfo>
+            <gmd:role>
+              <gmd:CI_RoleCode codeList="codeListLocation#CI_RoleCode" codeListValue="custodian">custodian</gmd:CI_RoleCode>
+            </gmd:role>
+          </gmd:CI_ResponsibleParty>
+        </gmd:pointOfContact>
+        <gmd:resourceMaintenance>
+          <gmd:MD_MaintenanceInformation>
+            <gmd:maintenanceAndUpdateFrequency>
+              <gmd:MD_MaintenanceFrequencyCode codeList="http://asdd.ga.gov.au/asdd/profileinfo/gmxCodelists.xml#MD_MaintenanceFrequencyCode" codeListValue="notPlanned">notPlanned</gmd:MD_MaintenanceFrequencyCode>
+            </gmd:maintenanceAndUpdateFrequency>
+          </gmd:MD_MaintenanceInformation>
+        </gmd:resourceMaintenance>
+        <gmd:resourceFormat>
+          <gmd:MD_Format>
+            <gmd:name>
+              <gco:CharacterString>unknown</gco:CharacterString>
+            </gmd:name>
+            <gmd:version>
+              <gco:CharacterString>unknown</gco:CharacterString>
+            </gmd:version>
+            <gmd:specification />
+          </gmd:MD_Format>
+        </gmd:resourceFormat>
+        <gmd:descriptiveKeywords>
+          <gmd:MD_Keywords>
+            <gmd:keyword>
+              <gco:CharacterString>Web Service</gco:CharacterString>
+            </gmd:keyword>
+          </gmd:MD_Keywords>
+        </gmd:descriptiveKeywords>
+        <gmd:descriptiveKeywords>
+          <gmd:MD_Keywords>
+            <gmd:keyword>
+              <gco:CharacterString>LAND Topography Models</gco:CharacterString>
+            </gmd:keyword>
+            <gmd:type>
+              <gmd:MD_KeywordTypeCode codeList="http://asdd.ga.gov.au/asdd/profileinfo/gmxCodelists.xml#MD_KeywordTypeCode" codeListValue="theme">theme</gmd:MD_KeywordTypeCode>
+            </gmd:type>
+          </gmd:MD_Keywords>
+        </gmd:descriptiveKeywords>
+        <gmd:descriptiveKeywords>
+          <gmd:MD_Keywords>
+            <gmd:keyword>
+              <gco:CharacterString>ECOLOGY Landscape</gco:CharacterString>
+            </gmd:keyword>
+            <gmd:type>
+              <gmd:MD_KeywordTypeCode codeList="http://asdd.ga.gov.au/asdd/profileinfo/gmxCodelists.xml#MD_KeywordTypeCode" codeListValue="theme">theme</gmd:MD_KeywordTypeCode>
+            </gmd:type>
+          </gmd:MD_Keywords>
+        </gmd:descriptiveKeywords>
+        <gmd:descriptiveKeywords>
+          <gmd:MD_Keywords>
+            <gmd:keyword>
+              <gco:CharacterString>topography</gco:CharacterString>
+            </gmd:keyword>
+            <gmd:type>
+              <gmd:MD_KeywordTypeCode codeList="http://asdd.ga.gov.au/asdd/profileinfo/gmxCodelists.xml#MD_KeywordTypeCode" codeListValue="theme">theme</gmd:MD_KeywordTypeCode>
+            </gmd:type>
+          </gmd:MD_Keywords>
+        </gmd:descriptiveKeywords>
+        <gmd:descriptiveKeywords>
+          <gmd:MD_Keywords>
+            <gmd:keyword>
+              <gco:CharacterString>Earth Sciences</gco:CharacterString>
+            </gmd:keyword>
+            <gmd:thesaurusName>
+              <gmd:CI_Citation>
+                <gmd:title>
+                  <gco:CharacterString>Australian and New Zealand Standard Research Classification (ANZSRC)</gco:CharacterString>
+                </gmd:title>
+                <gmd:date>
+                  <gmd:CI_Date>
+                    <gmd:date>
+                      <gco:DateTime>2008-03-31T00:00:00+11:00</gco:DateTime>
+                    </gmd:date>
+                    <gmd:dateType>
+                      <gmd:CI_DateTypeCode codeList="codeListLocation#CI_DateTypeCode" codeListValue="publication">publication</gmd:CI_DateTypeCode>
+                    </gmd:dateType>
+                  </gmd:CI_Date>
+                </gmd:date>
+                <gmd:citedResponsibleParty>
+                  <gmd:CI_ResponsibleParty>
+                    <gmd:organisationName>
+                      <gco:CharacterString>Australian Bureau of Statistics (ABS)</gco:CharacterString>
+                    </gmd:organisationName>
+                    <gmd:contactInfo>
+                      <gmd:CI_Contact>
+                        <gmd:onlineResource>
+                          <gmd:CI_OnlineResource>
+                            <gmd:linkage>
+                              <gmd:URL>http://www.abs.gov.au/ausstats/abs@.nsf/Latestproducts/1297.0Main%20Features32008?opendocument&amp;tabname=Summary&amp;prodno=1297.0&amp;issue=2008&amp;num=&amp;view=</gmd:URL>
+                            </gmd:linkage>
+                          </gmd:CI_OnlineResource>
+                        </gmd:onlineResource>
+                      </gmd:CI_Contact>
+                    </gmd:contactInfo>
+                    <gmd:role>
+                      <gmd:CI_RoleCode codeList="codeListLocation#CI_RoleCode" codeListValue="owner">owner</gmd:CI_RoleCode>
+                    </gmd:role>
+                  </gmd:CI_ResponsibleParty>
+                </gmd:citedResponsibleParty>
+                <gmd:ISBN>
+                  <gco:CharacterString>9780642483584</gco:CharacterString>
+                </gmd:ISBN>
+              </gmd:CI_Citation>
+            </gmd:thesaurusName>
+          </gmd:MD_Keywords>
+        </gmd:descriptiveKeywords>
+        <gmd:resourceConstraints>
+          <gmd:MD_LegalConstraints>
+            <gmd:accessConstraints>
+              <gmd:MD_RestrictionCode codeList="http://asdd.ga.gov.au/asdd/profileinfo/gmxCodelists.xml#MD_RestrictionCode" codeListValue="license">license</gmd:MD_RestrictionCode>
+            </gmd:accessConstraints>
+          </gmd:MD_LegalConstraints>
+        </gmd:resourceConstraints>
+        <gmd:resourceConstraints>
+          <gmd:MD_LegalConstraints>
+            <gmd:useConstraints>
+              <gmd:MD_RestrictionCode codeList="http://asdd.ga.gov.au/asdd/profileinfo/gmxCodelists.xml#MD_RestrictionCode" codeListValue="license">license</gmd:MD_RestrictionCode>
+            </gmd:useConstraints>
+            <gmd:otherConstraints>
+              <gco:CharacterString>Creative Commons Attribution 4.0 International Licence</gco:CharacterString>
+            </gmd:otherConstraints>
+          </gmd:MD_LegalConstraints>
+        </gmd:resourceConstraints>
+        <gmd:resourceConstraints>
+          <gmd:MD_SecurityConstraints>
+            <gmd:classification>
+              <gmd:MD_ClassificationCode codeList="http://asdd.ga.gov.au/asdd/profileinfo/gmxCodelists.xml#MD_ClassificationCode" codeListValue="unclassified">unclassified</gmd:MD_ClassificationCode>
+            </gmd:classification>
+          </gmd:MD_SecurityConstraints>
+        </gmd:resourceConstraints>
+        <srv:serviceType>
+          <gco:LocalName>ESRI:ArcGIS:ImageServer</gco:LocalName>
+        </srv:serviceType>
+        <srv:extent>
+          <gmd:EX_Extent>
+            <gmd:description>
+              <gco:CharacterString>4283</gco:CharacterString>
+            </gmd:description>
+            <gmd:geographicElement>
+              <gmd:EX_GeographicBoundingBox>
+                <gmd:westBoundLongitude>
+                  <gco:Decimal>113.0</gco:Decimal>
+                </gmd:westBoundLongitude>
+                <gmd:eastBoundLongitude>
+                  <gco:Decimal>154.0</gco:Decimal>
+                </gmd:eastBoundLongitude>
+                <gmd:southBoundLatitude>
+                  <gco:Decimal>-44.0</gco:Decimal>
+                </gmd:southBoundLatitude>
+                <gmd:northBoundLatitude>
+                  <gco:Decimal>-10.0</gco:Decimal>
+                </gmd:northBoundLatitude>
+              </gmd:EX_GeographicBoundingBox>
+            </gmd:geographicElement>
+          </gmd:EX_Extent>
+        </srv:extent>
+        <srv:couplingType>
+          <srv:SV_CouplingType codeList="codeListLocation#SV_CouplingType" codeListValue="loose">loose</srv:SV_CouplingType>
+        </srv:couplingType>
+        <srv:containsOperations>
+          <srv:SV_OperationMetadata>
+            <srv:operationName>
+              <gco:CharacterString>Services Directory</gco:CharacterString>
+            </srv:operationName>
+            <srv:DCP>
+              <srv:DCPList codeList="codeListLocation#DCPList" codeListValue="Web Services">Web Services</srv:DCPList>
+            </srv:DCP>
+            <srv:connectPoint>
+              <gmd:CI_OnlineResource>
+                <gmd:linkage>
+                  <gmd:URL>http://www.ga.gov.au/gisimg/rest/services/topography/dem_s_1s/ImageServer</gmd:URL>
+                </gmd:linkage>
+              </gmd:CI_OnlineResource>
+            </srv:connectPoint>
+          </srv:SV_OperationMetadata>
+        </srv:containsOperations>
+        <srv:containsOperations>
+          <srv:SV_OperationMetadata>
+            <srv:operationName>
+              <gco:CharacterString>REST API Information</gco:CharacterString>
+            </srv:operationName>
+            <srv:DCP>
+              <srv:DCPList codeList="codeListLocation#DCPList" codeListValue="Web Services">Web Services</srv:DCPList>
+            </srv:DCP>
+            <srv:connectPoint>
+              <gmd:CI_OnlineResource>
+                <gmd:linkage>
+                  <gmd:URL>http://intranet.ga.gov.au/gisimg/rest/services/topography/dem_s_1s/ImageServer?f=pjson</gmd:URL>
+                </gmd:linkage>
+              </gmd:CI_OnlineResource>
+            </srv:connectPoint>
+            <srv:parameters>
+              <srv:SV_Parameter>
+                <srv:name>
+                  <gco:aName>
+                    <gco:CharacterString>f</gco:CharacterString>
+                  </gco:aName>
+                  <gco:attributeType>
+                    <gco:TypeName>
+                      <gco:aName>
+                        <gco:CharacterString>TEXT</gco:CharacterString>
+                      </gco:aName>
+                    </gco:TypeName>
+                  </gco:attributeType>
+                </srv:name>
+                <srv:direction>
+                  <srv:SV_ParameterDirection>in</srv:SV_ParameterDirection>
+                </srv:direction>
+                <srv:description>
+                  <gco:CharacterString>The mandatory f parameter indicates the format of the response. When invoking the REST API Information operation the value json or pjson shall be used.</gco:CharacterString>
+                </srv:description>
+                <srv:optionality>
+                  <gco:Boolean>true</gco:Boolean>
+                </srv:optionality>
+                <srv:repeatability>
+                  <gco:Boolean>false</gco:Boolean>
+                </srv:repeatability>
+              </srv:SV_Parameter>
+            </srv:parameters>
+          </srv:SV_OperationMetadata>
+        </srv:containsOperations>
+      </srv:SV_ServiceIdentification>
+    </gmd:identificationInfo>
+    <gmd:distributionInfo>
+      <gmd:MD_Distribution>
+        <gmd:distributor>
+          <gmd:MD_Distributor>
+            <gmd:distributorContact>
+              <gmd:CI_ResponsibleParty>
+                <gmd:organisationName>
+                  <gco:CharacterString>Commonwealth of Australia (Geoscience Australia)</gco:CharacterString>
+                </gmd:organisationName>
+                <gmd:contactInfo>
+                  <gmd:CI_Contact>
+                    <gmd:phone>
+                      <gmd:CI_Telephone>
+                        <gmd:voice>
+                          <gco:CharacterString>02 6249 9966</gco:CharacterString>
+                        </gmd:voice>
+                      </gmd:CI_Telephone>
+                    </gmd:phone>
+                    <gmd:address>
+                      <gmd:CI_Address>
+                        <gmd:deliveryPoint>
+                          <gco:CharacterString>Cnr Jerrabomberra Ave and Hindmarsh Dr</gco:CharacterString>
+                        </gmd:deliveryPoint>
+                        <gmd:deliveryPoint>
+                          <gco:CharacterString>GPO Box 378</gco:CharacterString>
+                        </gmd:deliveryPoint>
+                        <gmd:city>
+                          <gco:CharacterString>Canberra</gco:CharacterString>
+                        </gmd:city>
+                        <gmd:administrativeArea>
+                          <gco:CharacterString>ACT</gco:CharacterString>
+                        </gmd:administrativeArea>
+                        <gmd:postalCode>
+                          <gco:CharacterString>2601</gco:CharacterString>
+                        </gmd:postalCode>
+                        <gmd:country>
+                          <gco:CharacterString>Australia</gco:CharacterString>
+                        </gmd:country>
+                        <gmd:electronicMailAddress>
+                          <gco:CharacterString>sales@ga.gov.au</gco:CharacterString>
+                        </gmd:electronicMailAddress>
+                      </gmd:CI_Address>
+                    </gmd:address>
+                  </gmd:CI_Contact>
+                </gmd:contactInfo>
+                <gmd:role>
+                  <gmd:CI_RoleCode codeList="codeListLocation#CI_RoleCode" codeListValue="distributor">distributor</gmd:CI_RoleCode>
+                </gmd:role>
+              </gmd:CI_ResponsibleParty>
+            </gmd:distributorContact>
+            <gmd:distributionOrderProcess>
+              <gmd:MD_StandardOrderProcess>
+                <gmd:plannedAvailableDateTime>
+                  <gco:DateTime>2015-05-21T15:05:52</gco:DateTime>
+                </gmd:plannedAvailableDateTime>
+              </gmd:MD_StandardOrderProcess>
+            </gmd:distributionOrderProcess>
+            <gmd:distributorTransferOptions>
+              <gmd:MD_DigitalTransferOptions>
+                <gmd:offLine>
+                  <gmd:MD_Medium>
+                    <gmd:name>
+                      <gmd:CI_Citation>
+                        <gmd:title>
+                          <gco:CharacterString>onLine</gco:CharacterString>
+                        </gmd:title>
+                      </gmd:CI_Citation>
+                    </gmd:name>
+                  </gmd:MD_Medium>
+                </gmd:offLine>
+              </gmd:MD_DigitalTransferOptions>
+            </gmd:distributorTransferOptions>
+          </gmd:MD_Distributor>
+        </gmd:distributor>
+        <gmd:transferOptions>
+          <gmd:MD_DigitalTransferOptions>
+            <gmd:onLine>
+              <gmd:CI_OnlineResource>
+                <gmd:linkage>
+                  <gmd:URL>http://intranet.ga.gov.au/gisimg/rest/services/topography/dem_s_1s/ImageServer</gmd:URL>
+                </gmd:linkage>
+                <gmd:protocol>
+                  <gco:CharacterString>ESRI: Image Service</gco:CharacterString>
+                </gmd:protocol>
+                <gmd:name>
+                  <gco:CharacterString>dem_s_1s</gco:CharacterString>
+                </gmd:name>
+                <gmd:description>
+                  <gco:CharacterString>dem_s_1s</gco:CharacterString>
+                </gmd:description>
+                <gmd:function>
+                  <gmd:CI_OnLineFunctionCode codeList="http://asdd.ga.gov.au/asdd/profileinfo/gmxCodelists.xml#CI_OnLineFunctionCode" codeListValue="information">information</gmd:CI_OnLineFunctionCode>
+                </gmd:function>
+              </gmd:CI_OnlineResource>
+            </gmd:onLine>
+          </gmd:MD_DigitalTransferOptions>
+        </gmd:transferOptions>
+      </gmd:MD_Distribution>
+    </gmd:distributionInfo>
+    <gmd:dataQualityInfo>
+      <gmd:DQ_DataQuality>
+        <gmd:scope>
+          <gmd:DQ_Scope>
+            <gmd:level>
+              <gmd:MD_ScopeCode codeList="codeListLocation#MD_ScopeCode" codeListValue="service">service</gmd:MD_ScopeCode>
+            </gmd:level>
+            <gmd:levelDescription>
+              <gmd:MD_ScopeDescription>
+                <gmd:other>
+                  <gco:CharacterString>Web Service</gco:CharacterString>
+                </gmd:other>
+              </gmd:MD_ScopeDescription>
+            </gmd:levelDescription>
+          </gmd:DQ_Scope>
+        </gmd:scope>
+        <gmd:lineage>
+          <gmd:LI_Lineage>
+            <gmd:statement>
+              <gco:CharacterString>Source data:
+, 1. SRTM 1 second Version 2 data (Slater et al., 2006), supplied by Defence Imagery and Geospatial Organisation (DIGO) as 813 1 x 1 degree tiles. Data was produced by NASA from radar data collected by the Shuttle Radar Topographic Mission in February 2000.
+, 2. GEODATA 9 second DEM Version 3 (Geoscience Australia, 2008) used to fill voids.
+, 3. SRTM Water Body Data (SWBD) shapefile accompanying the SRTM data (Slater et al., 2006). This defines the coastline and larger inland waterbodies for the SRTM DEM and DSM.
+, 4. Vegetation masks and water masks applied to the DEM to remove vegetation.
+, 5. Adaptive smoothing applied to DEM to produce DEM-S.
+, DSM processing:
+, This DEM was based on the 1 second SRTM-derived Digital Surface Model (DSM) that was itself derived from the 1 second Shuttle Radar Topographic Mission data. The DSM was produced by removing stripes, filling voids and re-flattening water bodies.
+, DEM processing (vegetation offset removal):
+, Vegetation offsets were identified using Landsat-based mapping of woody vegetation. The height offsets were estimated around the edges of vegetation patches then interpolated to a continuous surface of vegetation height offset that was subtracted from the DSM to produce a bare-earth DEM.
+, DEM-S Adaptive smoothing:
+, The smoothing process was based on the amount of noise in the DEM. The noise was estimated from the local variation in the difference between elevation and the mean of nearby elevations. The adaptive smoothing process was designed to smooth flat areas to a greater degree than steep areas, and to respond to the degree of noise so that very noisy flat areas are smoothed more than less noisy flat areas. The process operated over multiple resolutions, allowing smoothing over quite large distances in areas of very low relief.
+, Water bodies:
+, Water bodies defined from the SRTM Water Body Data as part of the DSM processing were set to the same elevations as in the DSM after the smoothing. The water bodies are also removed from the DEM (set to null) before the smoothing operation to prevent them affecting the land elevations unduly. One cell of water adjacent to land is retained to prevent shoreline elevations from being raised to match the higher elevations further from the shore.
+, Further details are provided in the DSM metadata (ANZCW0703013336) and 1 Second SRTM Derived Digital Elevation Models User Guide (Geoscience Australia and CSIRO Land and Water, 2011).</gco:CharacterString>
+            </gmd:statement>
+            <gmd:source>
+              <gmd:LI_Source>
+                <gmd:description>
+                  <gco:CharacterString>Source data not available.</gco:CharacterString>
+                </gmd:description>
+              </gmd:LI_Source>
+            </gmd:source>
+          </gmd:LI_Lineage>
+        </gmd:lineage>
+      </gmd:DQ_DataQuality>
+    </gmd:dataQualityInfo>
+    <gmd:metadataConstraints>
+      <gmd:MD_SecurityConstraints>
+        <gmd:classification>
+          <gmd:MD_ClassificationCode codeList="http://asdd.ga.gov.au/asdd/profileinfo/gmxCodelists.xml#MD_ClassificationCode" codeListValue="unclassified">unclassified</gmd:MD_ClassificationCode>
+        </gmd:classification>
+      </gmd:MD_SecurityConstraints>
+    </gmd:metadataConstraints>
+  </gmd:MD_Metadata>
+</csw:GetRecordByIdResponse>
+

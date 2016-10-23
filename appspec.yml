@@ -1,0 +1,21 @@
+version: 0.0
+os: linux
+files:
+  - source: /
+    destination: /home/ec2-user/live-timing
+hooks:
+  BeforeInstall:
+    - location: code-deploy/clean
+      timeout: 300
+      runas: root
+    - location: code-deploy/install_dependencies
+      timeout: 300
+      runas: root
+  ApplicationStart:
+    - location: code-deploy/start_server
+      timeout: 300
+      runas: ec2-user
+  ApplicationStop:
+    - location: code-deploy/stop_server
+      timeout: 300
+      runas: ec2-user

@@ -1,0 +1,3 @@
+#!/bin/bash
+cd /home/ec2-user/live-timing
+forever start --append --spinSleepTime 60000 --uid "liveTiming" server.js --public

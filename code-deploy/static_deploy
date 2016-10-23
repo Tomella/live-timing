@@ -1,0 +1,5 @@
+#!/bin/bash
+# Should be home already but make sure.
+cd /home/ec2-user/live-timing
+git pull
+sudo cp -rf liveTiming /var/www/html

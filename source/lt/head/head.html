@@ -1,0 +1,24 @@
+<table class="center">
+   <tbody>
+      <tr>
+         <th>Event</th>
+         <td ng-bind="head.event_tv_name"></td>
+         <th>Circuit</th>
+         <td ng-bind="head.circuit_name"></td>
+      </tr>
+      <tr>
+         <th>Category</th>
+         <td ng-bind="head.category"></td>
+         <th>Session</th>
+         <td ng-bind="head.session_name"></td>
+      </tr>
+      <tr>
+         <th>Duration</th>
+         <td ng-bind="head.duration"></td>
+         <th>Remaining</th>
+         <td ng-bind="head.remaining | minutes"></td>
+         <th>Last update</th>
+         <td ng-bind="head.date_formated"></td>
+      </tr>
+   </tbody>
+</table>

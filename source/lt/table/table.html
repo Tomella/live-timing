@@ -1,0 +1,33 @@
+<table class="center">
+   <thead>
+      <th>Pos.</th>
+      <th>No.</th>
+      <th>Rider</th>
+      <th>Team</th>
+      <th>Best Lap</th>
+      <th>Gap 1st</th>
+      <th>Gap Prev.</th>
+      <th>Last Lap</th>
+      <th>Laps</th>
+      <th>On Track</th>
+   </thead>
+   <tbody>
+      <tr ng-repeat="rider in riders" ng-class="{fastest: rider.last_lap == rider.num_lap, odd: $odd}">
+         <td>{{$index + 1}}</td>
+         <td>{{rider.rider_number}}</td>
+         <td>{{rider.rider_name}} {{rider.rider_surname}} </td>
+         <td><span ng-show="rider.team_name && rider.team_name != 'undefined'">{{rider.team_name}}</span></td>
+         <td>
+            <span ng-show="rider.lap_time" class="lap-time">
+               {{rider.lap_time}}
+               <span ng-hide="rider.num_lap">({{rider.num_lap}})</span>
+            </span>
+         </td>
+         <td><span ng-hide="$first">{{rider.gap_first}}</span></td>
+         <td><span ng-hide="$first">{{rider.gap_prev}}</span></td>
+         <td>{{rider.last_lap_time}}</td>
+         <td>{{rider.last_lap}}</td>
+         <td style="text-align: center;" ng-class="{inpit: rider.on_pit, ontrack: !rider.on_pit}">{{rider.on_pit?'In':'Out'}}</td>
+      </tr>
+   </tbody>
+</table>
