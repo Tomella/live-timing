@@ -39,3 +39,8 @@ table.center {
    margin-left:auto;
    margin-right:auto;
 }
+
+.fixed-width {
+   text-align: right;
+   font-family: Inconsolata, "Courier New", Courier, monospace;
+}

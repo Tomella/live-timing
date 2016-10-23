@@ -2,7 +2,7 @@
 
 	'use strict';
 
-	angular.module("LtApp", ["lt.head", "lt.table", "lt.templates"])
+	angular.module("LtApp", ["lt.head", "lt.race", "lt.table", "lt.type", "lt.templates"])
 
 	.run(['$http', '$rootScope', '$timeout', function($http, $rootScope, $timeout) {
 		pollService();

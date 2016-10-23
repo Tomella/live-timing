@@ -8,13 +8,10 @@
       return {
          restrict: 'AE',
          templateUrl: "lt/table/table.html",
+         scope: {
+            riders: "="
+         },
          link: function(scope) {
-            $rootScope.$on("lt.tick.data", function(event, data) {
-               scope.riders = [];
-               angular.forEach(data.rider, function(rider) {
-                  scope.riders.push(rider);
-               });
-            });
          }
       };
    }])
