@@ -16,7 +16,12 @@
          <th>Duration</th>
          <td ng-bind="head.duration"></td>
          <th>Remaining</th>
-         <td ng-bind="head.remaining | minutes"></td>
+         <td>
+            <span ng-show="head.session_status_id == 'F'">Finalized</span>
+            <i class="fa fa-flag fa-2x" style="color:darkred" aria-hidden="true" ng-show="head.session_status_id == 'I'"></i>
+            <span ng-bind="head.remaining | minutes" ng-show="head.session_status_id != 'F' && head.remaining" ></span>
+            <i class="fa fa-flag-checkered fa-2x" ng-show="head.session_status_id != 'F' && !head.remaining" ></i>
+         </td>
          <th>Last update</th>
          <td ng-bind="head.date_formated"></td>
       </tr>

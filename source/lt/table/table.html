@@ -13,7 +13,10 @@
    </thead>
    <tbody>
       <tr ng-repeat="rider in riders" ng-class="{fastest: rider.last_lap == rider.num_lap, odd: $odd}">
-         <td>{{$index + 1}}</td>
+         <td>
+            <span ng-show="rider.status_name != 'NC'">{{$index + 1}}</span>
+            <span ng-show="rider.status_name == 'NC'">NC</span>
+         </td>
          <td>{{rider.rider_number}}</td>
          <td>{{rider.rider_name}} {{rider.rider_surname}} </td>
          <td><span ng-show="rider.team_name && rider.team_name != 'undefined'">{{rider.team_name}}</span></td>
