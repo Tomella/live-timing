@@ -18,7 +18,10 @@
 
    .filter("minutes", function() {
       return function(seconds) {
-         return Math.floor(seconds/ 60) + ":" + (seconds % 60 > 9?seconds %60:"00");
+         if(+seconds < 60) {
+            return seconds;
+         }
+         return Math.floor(seconds/ 60) + ":" + (seconds % 60 > 9?"":"0") + seconds % 60;
       }
    });
 

@@ -52,9 +52,29 @@ under the License.
       };
    }]).filter("minutes", function () {
       return function (seconds) {
-         return Math.floor(seconds / 60) + ":" + (seconds % 60 > 9 ? seconds % 60 : "00");
+         if (+seconds < 60) {
+            return seconds;
+         }
+         return Math.floor(seconds / 60) + ":" + (seconds % 60 > 9 ? "" : "0") + seconds % 60;
       };
    });
+})(angular);
+'use strict';
+
+(function (angular) {
+
+   'use strict';
+
+   angular.module("lt.race", []).directive('ltRace', ['$rootScope', function ($rootScope) {
+      return {
+         restrict: 'AE',
+         templateUrl: "lt/race/race.html",
+         scope: {
+            riders: "="
+         },
+         link: function link(scope) {}
+      };
+   }]);
 })(angular);
 'use strict';
 
@@ -93,23 +113,6 @@ under the License.
 
    'use strict';
 
-   angular.module("lt.race", []).directive('ltRace', ['$rootScope', function ($rootScope) {
-      return {
-         restrict: 'AE',
-         templateUrl: "lt/race/race.html",
-         scope: {
-            riders: "="
-         },
-         link: function link(scope) {}
-      };
-   }]);
-})(angular);
-'use strict';
-
-(function (angular) {
-
-   'use strict';
-
    angular.module("lt.type", []).directive('ltType', ['$rootScope', function ($rootScope) {
       return {
          restrict: 'AE',
@@ -127,6 +130,6 @@ under the License.
    }]);
 })(angular);
 angular.module("lt.templates", []).run(["$templateCache", function($templateCache) {$templateCache.put("lt/head/head.html","<table class=\"center\">\r\n   <tbody>\r\n      <tr>\r\n         <th>Event</th>\r\n         <td ng-bind=\"head.event_tv_name\"></td>\r\n         <th>Circuit</th>\r\n         <td ng-bind=\"head.circuit_name\"></td>\r\n      </tr>\r\n      <tr>\r\n         <th>Category</th>\r\n         <td ng-bind=\"head.category\"></td>\r\n         <th>Session</th>\r\n         <td ng-bind=\"head.session_name\"></td>\r\n      </tr>\r\n      <tr>\r\n         <th>Duration</th>\r\n         <td ng-bind=\"head.duration\"></td>\r\n         <th>Remaining</th>\r\n         <td>\r\n            <span ng-show=\"head.session_status_id == \'F\'\">Finalized</span>\r\n            <i class=\"fa fa-flag fa-2x\" style=\"color:darkred\" aria-hidden=\"true\" ng-show=\"head.session_status_id == \'I\'\"></i>\r\n            <span ng-bind=\"head.remaining | minutes\" ng-show=\"head.session_status_id != \'F\' && head.remaining\" ></span>\r\n            <i class=\"fa fa-flag-checkered fa-2x\" ng-show=\"head.session_status_id != \'F\' && !head.remaining\" ></i>\r\n         </td>\r\n         <th>Last update</th>\r\n         <td ng-bind=\"head.date_formated\"></td>\r\n      </tr>\r\n   </tbody>\r\n</table>\r\n");
-$templateCache.put("lt/table/table.html","<table class=\"center\">\r\n   <thead>\r\n      <th>Pos.</th>\r\n      <th>No.</th>\r\n      <th>Rider</th>\r\n      <th>Team</th>\r\n      <th>Best Lap</th>\r\n      <th>Gap 1st</th>\r\n      <th>Gap Prev.</th>\r\n      <th>Last Lap</th>\r\n      <th>Laps</th>\r\n      <th>On Track</th>\r\n   </thead>\r\n   <tbody>\r\n      <tr ng-repeat=\"rider in riders\" ng-class=\"{fastest: rider.last_lap == rider.num_lap, odd: $odd}\">\r\n         <td>\r\n            <span ng-show=\"rider.status_name != \'NC\'\">{{$index + 1}}</span>\r\n            <span ng-show=\"rider.status_name == \'NC\'\">NC</span>\r\n         </td>\r\n         <td>{{rider.rider_number}}</td>\r\n         <td>{{rider.rider_name}} {{rider.rider_surname}} </td>\r\n         <td><span ng-show=\"rider.team_name && rider.team_name != \'undefined\'\">{{rider.team_name}}</span></td>\r\n         <td>\r\n            <span ng-show=\"rider.lap_time\" class=\"lap-time\">\r\n               {{rider.lap_time}}\r\n               <span ng-hide=\"rider.num_lap\">({{rider.num_lap}})</span>\r\n            </span>\r\n         </td>\r\n         <td><span ng-hide=\"$first\">{{rider.gap_first}}</span></td>\r\n         <td><span ng-hide=\"$first\">{{rider.gap_prev}}</span></td>\r\n         <td>{{rider.last_lap_time}}</td>\r\n         <td>{{rider.last_lap}}</td>\r\n         <td style=\"text-align: center;\" ng-class=\"{inpit: rider.on_pit, ontrack: !rider.on_pit}\">{{rider.on_pit?\'In\':\'Out\'}}</td>\r\n      </tr>\r\n   </tbody>\r\n</table>\r\n");
 $templateCache.put("lt/race/race.html","<table class=\"center\">\r\n   <thead>\r\n      <th>Pos.</th>\r\n      <th>No.</th>\r\n      <th>Rider</th>\r\n      <th>Team</th>\r\n      <th>Elapsed</th>\r\n      <th>Gap Prev.</th>\r\n      <th>Last Lap</th>\r\n      <th>Laps</th>\r\n      <th>Status</th>\r\n   </thead>\r\n   <tbody>\r\n      <tr ng-repeat=\"rider in riders\" ng-class=\"{fastest: rider.last_lap == rider.num_lap, odd: $odd}\">\r\n         <td>{{$index + 1}}</td>\r\n         <td>{{rider.rider_number}}</td>\r\n         <td>{{rider.rider_name}} {{rider.rider_surname}} </td>\r\n         <td><span ng-show=\"rider.team_name && rider.team_name != \'undefined\'\">{{rider.team_name}}</span></td>\r\n         <td class=\"fixed-width\">\r\n            <span ng-show=\"rider.lap_time && $first\" class=\"lap-time\">{{rider.lap_time}}</span>\r\n            <span ng-hide=\"$first\">{{rider.gap_first}}</span>\r\n         </td>\r\n         <td class=\"fixed-width\"><span ng-hide=\"$first\">{{rider.gap_prev}}</span></td>\r\n         <td class=\"fixed-width\">{{rider.last_lap_time}}</td>\r\n         <td class=\"fixed-width\">{{rider.last_lap}}</td>\r\n         <td style=\"text-align: center;\" ng-class=\"{inpit: rider.status_name != \'CL\', ontrack:  rider.status_name == \'CL\'}\">{{rider.status_name}}</td>\r\n      </tr>\r\n   </tbody>\r\n</table>\r\n");
+$templateCache.put("lt/table/table.html","<table class=\"center\">\r\n   <thead>\r\n      <th>Pos.</th>\r\n      <th>No.</th>\r\n      <th>Rider</th>\r\n      <th>Team</th>\r\n      <th>Best Lap</th>\r\n      <th>Gap 1st</th>\r\n      <th>Gap Prev.</th>\r\n      <th>Last Lap</th>\r\n      <th>Laps</th>\r\n      <th>On Track</th>\r\n   </thead>\r\n   <tbody>\r\n      <tr ng-repeat=\"rider in riders\" ng-class=\"{fastest: rider.last_lap == rider.num_lap, odd: $odd}\">\r\n         <td>\r\n            <span ng-show=\"rider.status_name != \'NC\'\">{{$index + 1}}</span>\r\n            <span ng-show=\"rider.status_name == \'NC\'\">NC</span>\r\n         </td>\r\n         <td>{{rider.rider_number}}</td>\r\n         <td>{{rider.rider_name}} {{rider.rider_surname}} </td>\r\n         <td><span ng-show=\"rider.team_name && rider.team_name != \'undefined\'\">{{rider.team_name}}</span></td>\r\n         <td>\r\n            <span ng-show=\"rider.lap_time\" class=\"lap-time\">\r\n               {{rider.lap_time}}\r\n               <span ng-hide=\"rider.num_lap\">({{rider.num_lap}})</span>\r\n            </span>\r\n         </td>\r\n         <td><span ng-hide=\"$first\">{{rider.gap_first}}</span></td>\r\n         <td><span ng-hide=\"$first\">{{rider.gap_prev}}</span></td>\r\n         <td>{{rider.last_lap_time}}</td>\r\n         <td>{{rider.last_lap}}</td>\r\n         <td style=\"text-align: center;\" ng-class=\"{inpit: rider.on_pit, ontrack: !rider.on_pit}\">{{rider.on_pit?\'In\':\'Out\'}}</td>\r\n      </tr>\r\n   </tbody>\r\n</table>\r\n");
 $templateCache.put("lt/type/type.html","<div>\r\n   <lt-table ng-if=\"!isRace\" riders=\"riders\"></lt-table>\r\n   <lt-race ng-if=\"isRace\" riders=\"riders\"></lt-race>\r\n</div>");}]);
