@@ -11,7 +11,7 @@
       <th>Status</th>
    </thead>
    <tbody>
-      <tr ng-repeat="rider in riders" ng-class="{fastest: rider.last_lap == rider.num_lap, odd: $odd}">
+      <tr ng-repeat="rider in riders" ng-class="{fastest: (rider.last_lap == rider.num_lap && !rider.on_pit), odd: $odd}">
          <td>{{$index + 1}}</td>
          <td>{{rider.rider_number}}</td>
          <td>{{rider.rider_name}} {{rider.rider_surname}} </td>

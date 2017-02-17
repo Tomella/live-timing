@@ -9,7 +9,7 @@
 
 		function pollService() {
 			$timeout(pollService, 10000);
-			$http.get("proxy/http://www.motogp.com/en/json/live_timing/101").then(function(response) {
+			$http.get("proxy/http://www.motogp.com/en/json/live_timing/103").then(function(response) {
 				$rootScope.$broadcast("lt.tick.data", response.data.lt);
 			});
 		}
