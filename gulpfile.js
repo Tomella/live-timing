@@ -44,7 +44,7 @@ gulp.task('views', function () {
 });
 
 //Concatenate & Minify JS
-gulp.task('scripts', ["commonScripts", 'ltScripts']);
+gulp.task('scripts', ["commonScripts", 'ltScripts', 'wsbkScripts']);
 
 //Concatenate & Minify JS
 gulp.task('commonScripts', function() {
@@ -54,6 +54,11 @@ gulp.task('commonScripts', function() {
 //Concatenate & Minify JS
 gulp.task('ltScripts', function() {
    return prepareScripts('lt');
+});
+
+//Concatenate & Minify JS
+gulp.task('wsbkScripts', function() {
+   return prepareScripts('wsbk');
 });
 
 function prepareScripts(name) {

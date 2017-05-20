@@ -11,7 +11,7 @@ var X2JS = require('x2js');
 var StringDecoder = require('string_decoder').StringDecoder;
 var yargs = require('yargs').options({
     'port': {
-        'default': 6000,
+        'default': 3000,
         'description': 'Port to listen on.'
     },
     'public': {

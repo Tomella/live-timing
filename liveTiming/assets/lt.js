@@ -24,11 +24,14 @@ under the License.
 	'use strict';
 
 	angular.module("LtApp", ["lt.head", "lt.race", "lt.table", "lt.type", "lt.templates"]).run(['$http', '$rootScope', '$timeout', function ($http, $rootScope, $timeout) {
+		var parameters = UrlParameters.parameters();
+		var number = parameters.id ? parameters.id : 103;
+
 		pollService();
 
 		function pollService() {
 			$timeout(pollService, 10000);
-			$http.get("proxy/http://www.motogp.com/en/json/live_timing/103").then(function (response) {
+			$http.get("proxy/http://www.motogp.com/en/json/live_timing/" + number).then(function (response) {
 				$rootScope.$broadcast("lt.tick.data", response.data.lt);
 			});
 		}
