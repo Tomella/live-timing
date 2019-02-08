@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+
+<head>
+</head>
+
+<body>
+
+   <script>
+function pairwise(arr, arg) {
+   var matched = new Set([]);
+   arr.forEach((el, idx) => {
+      var match = arr.findIndex((further, fidx) => {
+         if (fidx <= idx) return false;  // Don't want smaller ones
+         if (matched.has(fidx) || matched.has(idx)) return false; // We've already matched this one.
+         return arg == further + el;
+      });
+      if (match > -1) {
+         matched.add(idx);
+         matched.add(match);
+      }
+   });
+   return matched.size ? Array.from(matched.keys()).reduce((acc, val) => acc + val) : 0;
+}
+
+console.log(pairwise([1,4,2,3,0,5], 7));
+
+console.log(pairwise([1, 3, 2, 4], 4)); // should return 1.
+console.log(pairwise([1, 1, 1], 2)); // should return 1.
+console.log(pairwise([0, 0, 0, 0, 1, 1], 1)); // should return 10.
+console.log(pairwise([], 100)); // should return 0.
+
+
+   </script>
+
+</body>
+
+</html>
