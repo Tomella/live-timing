@@ -25,4 +25,4 @@ class UrlParameters {
    static parameters() {
       return query;
    }
-};
+}

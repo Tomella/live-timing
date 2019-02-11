@@ -1,7 +1,4 @@
-(function (angular) {
-
-	'use strict';
-
+{
 	angular.module("lt.type", [])
 
 	.directive('ltType', ['$rootScope', function($rootScope) {
@@ -19,5 +16,4 @@
          }
       };
 	}]);
-
-})(angular);
+}

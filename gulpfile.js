@@ -6,15 +6,10 @@ var fs            = require('fs');
 var header        = require('gulp-header');
 var jshint        = require('gulp-jshint');
 var babel         = require('gulp-babel');
-var sass          = require('gulp-sass');
 var concat        = require('gulp-concat');
 var concatCss     = require('gulp-concat-css');
-var insert        = require('gulp-insert');
 var uglify        = require('gulp-uglify');
-var rename        = require('gulp-rename');
 var templateCache = require('gulp-angular-templatecache');
-var war           = require('gulp-war');
-var zip           = require('gulp-zip');
 var addStream     = require('add-stream');
 
 var directories = {

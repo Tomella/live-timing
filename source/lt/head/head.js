@@ -1,7 +1,4 @@
-(function (angular) {
-
-	'use strict';
-
+{
 	angular.module("lt.head", [])
 
 	.directive('ltHead', ['$rootScope', function($rootScope) {
@@ -24,5 +21,4 @@
          return Math.floor(seconds/ 60) + ":" + (seconds % 60 > 9?"":"0") + seconds % 60;
       };
    });
-
-})(angular);
+}

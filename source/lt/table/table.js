@@ -1,7 +1,4 @@
-(function (angular) {
-
-   'use strict';
-
+{
    angular.module("lt.table", [])
 
    .directive('ltTable', ['$rootScope', function($rootScope) {
@@ -32,5 +29,4 @@
          });
       };
    });
-
-})(angular);
+}

@@ -60,5 +60,3 @@ var UrlParameters = function () {
 
   return UrlParameters;
 }();
-
-;
