@@ -1,3 +1,5 @@
+# DEPRECATED - Look at project lt2 (Live Timing 2) It's much simpler.
+
 ## Simple live timing for MotoGP
 
 The MotoGP live timing has a rich JSON datafeed but they only show a bit of the data in their free live timing.
